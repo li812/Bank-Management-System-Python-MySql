@@ -14,9 +14,6 @@ import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
 
-
-
-
 mydb=mysql.connector.connect(host ="localhost",user="root",password="")
 mycursor=mydb.cursor()
 mycursor.execute("create database if not exists bms")
@@ -30,15 +27,6 @@ mycursor.execute("create table if not exists staff(staff_id INT NOT NULL AUTO_IN
 mycursor.execute("create table if not exists freezed(f_id INT NOT NULL AUTO_INCREMENT, login_id INT NOT NULL, date varchar(12), PRIMARY KEY (f_id), FOREIGN KEY (login_id) REFERENCES login(login_id))")
 mycursor.execute("create table if not exists transactions(trans_id int not null auto_increment, cus_id int not null, account_number varchar(20),balance int, date varchar(12), time varchar(12), PRIMARY KEY (trans_id), FOREIGN KEY (cus_id) REFERENCES customer(cus_id))")
 mydb.commit()
-
-# sql_query = pd.read_sql_query(''' 
-#                               select * from customer
-#                               '''
-#                               ,mydb)
-# df = pd.DataFrame(sql_query)
-# filenm=input("Enter file name:")
-# file = filenm+".csv"
-# df.to_csv (file, index = False)
 
 ascii_banner = pyfiglet.figlet_format("BANK MANGEMENT SYSTEM")
 print("_________________________________________________________________")
