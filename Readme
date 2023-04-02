@@ -1,0 +1,7 @@
+This is a banking system program written in Python. It allows users to perform various banking tasks such as account creation, deposit, withdrawal, sending money, viewing account statement, managing accounts, and more.
+
+The code uses a MySQL database to store and retrieve user data. It also employs functions to separate different tasks and make the code more organized. The program has three different types of users: Admin, Staff, and Customer, each with its own set of capabilities and limitations.
+
+When the program is launched, the user is presented with a login screen where they can enter their login credentials. After successful authentication, the user is taken to their respective dashboard where they can perform various tasks depending on their user type.
+
+The program makes use of various Python libraries, including MySQL connector, pandas, and tabulate, to perform database operations and generate tabular data. It also employs various control statements, such as if-else and switch-case, to manage program flow.
